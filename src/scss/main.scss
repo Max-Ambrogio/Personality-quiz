@@ -1,0 +1,189 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+
+@use 'reset';
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(161, 142, 165);
+}
+
+/* 2. Content ================================= */
+
+.page.show{
+		z-index: 1;
+		opacity: 1;
+	}
+
+.page {
+	z-index: -1;
+    width: 80%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgb(77, 58, 70);
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, 0);
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+
+	
+	.selected{
+		transform: scale(1.1);
+		transition: 300ms;
+		box-shadow: 5px 5px 5px rgb(255, 169, 169);
+	}
+
+	
+
+    h1 {
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 2em;
+		margin-bottom: 20px;
+		color: black;
+    }
+
+	h2{
+		font-family: sans-serif;
+        font-weight: 400;
+        font-size: 1.5em;
+		margin-bottom: 15px;
+		color: black;
+	}
+
+	button{
+		position: absolute;
+		bottom: -20px;
+		font-size: 1rem;
+		border-radius: 20px;
+		padding: 12px 22px;
+		background-color: antiquewhite;
+		transition: transform 300ms;
+		color: black;
+
+		&.next{
+			right: 30px;
+			font-weight: 600;
+		}
+
+		&.prev{
+			left: 30px;
+			font-weight: 600;
+		}
+
+		&.results{
+			right: 30px;
+		}
+	}
+
+	button:hover{
+		transform: scale(1.1);
+	}
+
+	
+
+	.options{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.option{
+			width: 40%;
+			background-color: rgba(184, 217, 243, 0.296);
+			padding: 50px;
+			margin: 45px;
+			border-radius: 10px;
+			transition: transform 300ms;
+			
+
+			p{
+				font-family: sans-serif;
+        		font-weight: 800;
+        		font-size: 1.2em;
+				color:rgb(46, 46, 46);
+			}
+		}
+
+		.option:hover{
+			transform: scale(1.1);
+		}
+
+	}
+
+	
+
+	
+}
+
+.jump-link{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 20px;
+	a{
+		text-decoration: none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 700;
+		color: rgb(249, 255, 208);
+		font-size: 12px;
+		transition: transform 500ms;
+	}
+
+	a:hover{
+		transform: scale(1.05);
+	}
+
+
+}
+
+.results{
+	font-family: sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+	text-align: center;
+}
+
+.results-img{
+	width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

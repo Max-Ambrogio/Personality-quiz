@@ -1,0 +1,291 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+/* 1. Main Layout ================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #a18ea5;
+}
+
+/* 2. Content ================================= */
+.page.show {
+  z-index: 1;
+  opacity: 1;
+}
+
+.page {
+  z-index: -1;
+  width: 80%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #4d3a46;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.page .selected {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  transition: 300ms;
+  box-shadow: 5px 5px 5px #ffa9a9;
+}
+.page h1 {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: black;
+}
+.page h2 {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: black;
+}
+.page button {
+  position: absolute;
+  bottom: -20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 12px 22px;
+  background-color: antiquewhite;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  color: black;
+}
+.page button.next {
+  right: 30px;
+  font-weight: 600;
+}
+.page button.prev {
+  left: 30px;
+  font-weight: 600;
+}
+.page button.results {
+  right: 30px;
+}
+.page button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.page .options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.page .options .option {
+  width: 40%;
+  background-color: rgba(184, 217, 243, 0.296);
+  padding: 50px;
+  margin: 45px;
+  border-radius: 10px;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+.page .options .option p {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  color: #2e2e2e;
+}
+.page .options .option:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.jump-link {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.jump-link a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #f9ffd0;
+  font-size: 12px;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+.jump-link a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.results {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+
+.results-img {
+  width: 150px;
+}
+/*# sourceMappingURL=main.css.map */
