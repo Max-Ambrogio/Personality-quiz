@@ -89,21 +89,37 @@ let calculations = function(){
        resultsApple.classList.add('results')
        resultsApple.innerText = "You're an Apple!"
        resultsPage.append(resultsApple)
+       let appleGif = document.createElement('img')
+       appleGif.setAttribute('src' , "https://acegif.com/wp-content/gifs/apple-3.gif")
+       appleGif.classList.add('img')
+       resultsPage.append(appleGif)
     } if (orange > 2) {
         let resultsOrange = document.createElement("div")
         resultsOrange.classList.add('results')
         resultsOrange.innerText = "You're an Orange!"
         resultsPage.append(resultsOrange)
+        let orangeGif = document.createElement('img')
+        orangeGif.setAttribute('src' , "https://oiroegbu.files.wordpress.com/2017/10/fist_pump.gif")
+        orangeGif.classList.add('img')
+        resultsPage.append(orangeGif)
     } if (grape > 2) {
         let resultsGrape = document.createElement("div")
         resultsGrape.classList.add('results')
         resultsGrape.innerText = "You're a Grape!"
         resultsPage.append(resultsGrape)
+        let grapeGif = document.createElement('img')
+        grapeGif.setAttribute('src' , "https://media.baamboozle.com/uploads/images/197603/1624875759_61064.gif")
+        grapeGif.classList.add('img')
+        resultsPage.append(grapeGif)
     } if (banana > 2) {
         let resultsBanana = document.createElement("div")
         resultsBanana.classList.add('results')
         resultsBanana.innerText = "You're a Banana!"
         resultsPage.append(resultsBanana)
+        let bananaGif = document.createElement('img')
+        bananaGif.setAttribute('src' , "https://i.pinimg.com/originals/f3/0e/21/f30e21da146bd3501555eec943a8898e.gif")
+        bananaGif.classList.add('img')
+        resultsPage.append(bananaGif)
     }
 }
 
